@@ -135,7 +135,7 @@ def precompute_comparison():
 
     # Quality by city
     if "quality_grade" in gdf.columns and "city" in gdf.columns:
-        city_col = gdf["city"].fillna("Unknown").astype(str)
+        city_col = gdf["city"].astype(str).fillna("Unknown")
         q = gdf["quality_grade"].fillna("unknown").astype(str).str.lower()
         temp = gdf.copy()
         temp["_city"] = city_col
