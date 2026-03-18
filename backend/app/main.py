@@ -47,14 +47,6 @@ async def startup_event():
     print("Loading observation data into cache...")
     DataLoader.load_data()
     print("Data cache initialized successfully")
-    
-    # Pre-compute heavy strategy endpoint so first request is instant
-    try:
-        from app.routers.strategy import _compute_priority_zones
-        _compute_priority_zones()
-    except Exception as e:
-        print(f"Warning: Could not pre-compute priority zones: {e}")
-
 
 @app.get("/")
 async def root():
