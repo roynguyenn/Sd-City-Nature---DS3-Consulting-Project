@@ -313,7 +313,7 @@ export interface ExploratoryDashboard {
 }
 
 // From combined-website: strategy map types
-type MapHex = {
+export type MapHex = {
   zone_id: string;
   center_lat: number;
   center_lng: number;
@@ -322,4 +322,4 @@ type MapHex = {
   priority_category?: PriorityZone['priority_category'];
 };
 
-type PriorityZonesBundle = { hexes: MapHex[]; top: PriorityZone[] };
+export type PriorityZonesBundle = { hexes: MapHex[]; top: PriorityZone[] };

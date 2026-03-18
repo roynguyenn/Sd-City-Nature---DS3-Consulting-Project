@@ -16,7 +16,8 @@ export function ChartCard({
   subtitle,
   loading = false,
   error = null,
-  children
+  children,
+  compact: _compact = false
 }: ChartCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md p-6 min-w-0 overflow-hidden">

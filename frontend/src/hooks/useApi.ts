@@ -7,7 +7,7 @@ interface UseApiReturn<T> {
   refetch: () => void;
 }
 
-const API_BASE = '';
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 /**
  * Custom hook for fetching data from the FastAPI backend
