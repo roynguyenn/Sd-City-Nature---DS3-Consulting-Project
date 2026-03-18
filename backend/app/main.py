@@ -25,6 +25,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://sd-city-nature-ds-3-consulting-project.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
